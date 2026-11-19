@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShopEase online shopping store for electronics, fashion and accessories.">
+
+    <title>ShopEase | Online Shopping</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- External JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <a class="logo" href="#home">Shop<span>Ease</span></a>
+
+        <nav class="navigation" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="cart-button" id="cart-toggle"
+                type="button" aria-label="View shopping cart">
+            🛒 Cart <span id="cart-count">0</span>
+        </button>
+    </header>
+
+    <main>
+        <!-- Hero section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">YOUR EVERYDAY SHOPPING DESTINATION</p>
+                <h1>Find Your Style.<br>Love Every Purchase.</h1>
+                <p class="hero-description">
+                    Discover quality products at prices you'll love.
+                    Your next favourite item is waiting for you.
+                </p>
+                <a href="#products" class="primary-button">Shop Now &rarr;</a>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="benefits" aria-label="Shopping benefits">
+            <article class="benefit">
+                <span class="benefit-icon">🚚</span>
+                <div>
+                    <h3>Fast Delivery</h3>
+                    <p>Convenient shopping</p>
+                </div>
+            </article>
+
+            <article class="benefit">
+                <span class="benefit-icon">🔒</span>
+                <div>
+                    <h3>Secure Shopping</h3>
+                    <p>A simple demo store</p>
+                </div>
+            </article>
+
+            <article class="benefit">
+                <span class="benefit-icon">💎</span>
+                <div>
+                    <h3>Quality Products</h3>
+                    <p>Picked for you</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Products -->
+        <section class="products-section" id="products">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">OUR COLLECTION</p>
+                    <h2>Explore Products</h2>
+                    <p class="section-description">
+                        Find something special for yourself.
+                    </p>
+                </div>
+
+                <label class="search-box">
+                    <span aria-hidden="true">🔍</span>
+                    <input type="search" id="search-input"
+                           placeholder="Search products..."
+                           aria-label="Search products">
+                </label>
+            </div>
+
+            <!-- Category filters -->
+            <div class="category-list" id="category-list"
+                 aria-label="Filter by category">
+                <button class="category-button active"
+                        data-category="All" aria-pressed="true">
+                    All Products
+                </button>
+                <button class="category-button"
+                        data-category="Electronics" aria-pressed="false">
+                    Electronics
+                </button>
+                <button class="category-button"
+                        data-category="Fashion" aria-pressed="false">
+                    Fashion
+                </button>
+                <button class="category-button"
+                        data-category="Accessories" aria-pressed="false">
+                    Accessories
+                </button>
+            </div>
+
+            <p class="results-count" id="results-count"
+               aria-live="polite"></p>
+
+            <div class="product-grid" id="product-grid">
+                <!-- Product cards are created by JavaScript. -->
+            </div>
+        </section>
+
+        <!-- Shopping cart -->
+        <section class="cart-section" id="cart">
+            <div class="cart-heading">
+                <div>
+                    <p class="eyebrow">YOUR SELECTION</p>
+                    <h2>Shopping Cart</h2>
+                </div>
+                <span class="cart-heading-icon">🛍️</span>
+            </div>
+
+            <div id="cart-items" aria-live="polite">
+                <p class="empty-cart">Your cart is empty. Start shopping!</p>
+            </div>
+
+            <div class="cart-summary">
+                <p>Subtotal <span id="cart-subtotal">₹0.00</span></p>
+                <p>Delivery <span id="delivery-cost">₹0.00</span></p>
+                <p class="grand-total">
+                    Total <span id="cart-total">₹0.00</span>
+                </p>
+                <button class="checkout-button" id="checkout-button"
+                        type="button">
+                    Proceed to Checkout →
+                </button>
+                <p class="demo-note">
+                    Demo website only. No real payment is collected.
+                </p>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about-section" id="about">
+            <div>
+                <p class="eyebrow">ABOUT SHOPEASE</p>
+                <h2>Shopping made simple.</h2>
+            </div>
+            <p>
+                ShopEase is a sample online shopping website built using
+                HTML, CSS and JavaScript. Browse products, search by name,
+                filter categories and manage your shopping cart.
+            </p>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact-section" id="contact">
+            <h2>Need Help?</h2>
+            <p>This is a student demo project, not a live retail service.</p>
+            <a href="mailto:hello@example.com">Contact the Demo Store</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <a class="logo footer-logo" href="#home">
+            Shop<span>Ease</span>
+        </a>
+        <p>Designed with HTML, CSS and JavaScript.</p>
+        <p>&copy; <span id="current-year"></span> ShopEase Demo.</p>
+    </footer>
+
+    <!-- Notification -->
+    <div class="toast" id="toast" role="status"
+         aria-live="polite" hidden></div>
+
+</body>
+</html>
